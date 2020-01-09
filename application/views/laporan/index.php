@@ -196,12 +196,18 @@
 
       <div class="form-group">
               <label for="Kategori">Barang : </label>
-                  <select required name="barang" id="barang" class="form-control">
+                  <!-- <select required name="barang" id="barang" class="form-control">
                     <option value="">-- Pilih Barang --</option>
                     <?php foreach($data->result_array() as $x) { ?>
                           <option value="<?= $x['barang_id']; ?>"><?= $x['barang_nama']; ?></option>
                     <?php }?>
-                  </select>
+                  </select> -->
+                  <input type="text" list="list_barang" autocomplete="off" name="barang" id="nabarku" class="form-control input-sm">
+                        <datalist id="list_barang">
+                          <?php foreach ($data->result_array() as $x): ?>
+                           <option value="<?= $x['barang_id']; ?>"><?= $x['barang_nama']; ?></option>
+                          <?php endforeach ?>
+                  </datalist>
           </div>
 
         <div class="form-group">
@@ -247,12 +253,18 @@
 
       <div class="form-group">
               <label for="Kategori">Barang : </label>
-                  <select required name="kat_barang" id="kat_barang" class="form-control">
+                  <!-- <select required name="kat_barang" id="kat_barang" class="form-control">
                     <option value="">-- Pilih Kategori Barang --</option>
                     <?php foreach($kat->result_array() as $x) { ?>
                           <option value="<?= $x['kategori_id']; ?>"><?= $x['kategori_nama']; ?></option>
                     <?php }?>
-                  </select>
+                  </select> -->
+                  <input type="text" list="list_barang2" autocomplete="off" name="kat_barang" id="kat_barang" class="form-control input-sm">
+                        <datalist id="list_barang2">
+                          <?php foreach ($kat->result_array() as $x): ?>
+                           <option value="<?= $x['kategori_id']; ?>"><?= $x['kategori_nama']; ?></option>
+                          <?php endforeach ?>
+                  </datalist>
           </div>
 
         <div class="form-group">
