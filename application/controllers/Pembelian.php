@@ -27,7 +27,6 @@ class Pembelian extends CI_Controller
 
 	}
 
-	
 	function in_pembelian(){
 		$this->cart->destroy();
 		redirect('pembelian');
