@@ -58,7 +58,7 @@ class Pembelian extends CI_Controller
 					   'satuan'   => $i['barang_satuan'],
 					   'price'    => $this->input->post('harpok'),
 					   'harga'    => $this->input->post('harjul'),
-					   'qty'      => $this->input->post('jumlah')
+					   'qty'      => $this->input->post('jumlah'),
 					);
 		
 				$this->cart->insert($data); 
