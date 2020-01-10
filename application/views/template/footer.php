@@ -146,12 +146,12 @@
 
   function select_barang1() {
     
-    var kobar = {nabar:$(this).val()};
+    var kobarku = {nabar:$(this).val()};
         
     $.ajax({
                type: "POST",
                url : "<?php echo site_url('pembelian/get_barang');?>",
-               data: kobar,
+               data: kobarku,
                success: function(msg){
                $('#detail_barang').html(msg);
                }
@@ -195,13 +195,12 @@
           
       
       $("#nabarku").on('keyup', select_barang1);
-            $("#nabarku").on('change', select_barang1);
-      $("#nabarku").on('blur', select_barang1);
+
       $("#nabarku").on('input', select_barang1);
       
     
       
-            $("#nabar").keypress(function(e){
+            $("#nabarku").keypress(function(e){
                 if(e.which==13){
                     $("#jumlah").focus();
                 }
